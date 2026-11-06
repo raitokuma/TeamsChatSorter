@@ -1,0 +1,21 @@
+{
+  "name": "teams-chat-sorter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Microsoft Teams personal app: list all chats sorted by last activity",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.28.1",
+    "@microsoft/teams-js": "^2.34.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^6.0.7"
+  }
+}

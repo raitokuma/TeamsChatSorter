@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "{{APP_VERSION}}",
+  "id": "{{TEAMS_APP_ID}}",
+  "developer": {
+    "name": "{{DEVELOPER_NAME}}",
+    "websiteUrl": "{{APP_HOST_URL}}",
+    "privacyUrl": "{{APP_HOST_URL}}",
+    "termsOfUseUrl": "{{APP_HOST_URL}}"
+  },
+  "name": {
+    "short": "所有聊天",
+    "full": "所有聊天（依最後更新時間排序）"
+  },
+  "description": {
+    "short": "將你的全部 Teams 聊天依最後訊息時間排序顯示",
+    "full": "在一個清單中列出你所有的一對一、群組與會議聊天，依最後訊息時間由新到舊排序，不受聊天區段（sections）分組影響。支援搜尋、未讀篩選、聊天類型篩選，點擊即可開啟該聊天。"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#5B5FC7",
+  "staticTabs": [
+    {
+      "entityId": "allChatsByTime",
+      "name": "所有聊天",
+      "contentUrl": "{{APP_HOST_URL}}",
+      "websiteUrl": "{{APP_HOST_URL}}",
+      "scopes": ["personal"]
+    }
+  ],
+  "permissions": ["identity"],
+  "validDomains": ["{{APP_HOST_DOMAIN}}"],
+  "webApplicationInfo": {
+    "id": "{{VITE_CLIENT_ID}}"
+  },
+  "showLoadingIndicator": false
+}

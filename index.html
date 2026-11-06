@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>所有聊天</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="title">
+        <h1>所有聊天</h1>
+        <span id="status" class="status" aria-live="polite"></span>
+      </div>
+      <div class="controls">
+        <input id="search" type="search" placeholder="搜尋聊天名稱、成員或訊息…" autocomplete="off" />
+        <div class="filters" role="tablist" aria-label="篩選">
+          <button class="chip active" data-filter="all" role="tab">全部</button>
+          <button class="chip" data-filter="unread" role="tab">未讀</button>
+          <button class="chip" data-filter="oneOnOne" role="tab">一對一</button>
+          <button class="chip" data-filter="group" role="tab">群組</button>
+          <button class="chip" data-filter="meeting" role="tab">會議</button>
+        </div>
+        <button id="refresh" class="icon-btn" title="重新整理" aria-label="重新整理">⟳</button>
+      </div>
+    </header>
+    <main>
+      <div id="signin" class="signin" hidden>
+        <p>需要登入 Microsoft 帳戶以讀取你的聊天清單。</p>
+        <button id="signin-btn" class="primary">登入</button>
+      </div>
+      <div id="error" class="error" hidden></div>
+      <ul id="list" class="chat-list" aria-label="聊天清單"></ul>
+      <div id="empty" class="empty" hidden>沒有符合的聊天</div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
